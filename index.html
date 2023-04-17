@@ -1,5 +1,9 @@
-<html>
- <head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title> MSO </title>
  </head>
  <body>
@@ -8,5 +12,94 @@
     <a href="./pag2.html"> p2</a>
   </nav>
    <h1> Hola </h1>
+
+   <script>
+/*
+    var num1;
+    var num2;
+    num1=prompt('Dime un num','')
+    num2=prompt('Dime un num','')
+    
+    var i;
+    for(i=1;i<=num2;i++)
+    {
+      document.write(num1+" ") //poner num1 para que te ponga el nuemro
+      if (i%8==0){
+      document.write("<br> ");
+
+   
+  }
+    }
+
+    
+    document.write("<br> ");*/
+    const numRows = 3;
+const numCols = 5;
+const startCol = 20;
+
+let output = '';
+
+// Iterar sobre cada fila
+for (let i = 0; i < numRows; i++) {
+
+  // Agregar espacios en blanco para alinear la pirámide en la columna 20
+  for (let j = 0; j < startCol; j++) {
+    output += '&nbsp;';
+  }
+
+  // Agregar el carácter '*' en lugar de 'o' en la esquina superior izquierda de la pirámide
+  if (i === 0) {
+    output += '*';
+  } else {
+    output += '&nbsp;';
+  }
+
+  // Iterar sobre cada columna en la fila actual
+  for (let j = 0; j < numCols; j++) {
+
+    // Verificar si esta columna debe tener una letra 'o'
+    const shouldPrint = (i + j) >= (numRows - 1) && (j - i) <= (numRows - 1);
+
+    // Sustituir la primera 'o' en la última fila por un asterisco
+    if (i === numRows - 1 && j === 0) {
+      output += '*';
+    }
+    // Sustituir la última 'o' en la última fila por un asterisco
+    else if (i === numRows - 1 && j === numCols - 1) {
+      output += '*';
+    }
+    // Agregar una letra 'o' en las demás posiciones que correspondan
+    else if (shouldPrint) {
+      output += 'o&nbsp;';
+    } else {
+      output += '&nbsp;&nbsp;';
+    }
+
+  }
+
+  // Sustituir la primera 'o' de la primera fila por un asterisco
+  if (i === 0) {
+    output += '*';
+  }
+  // Sustituir la última 'o' de la última fila por un asterisco
+  else if (i === numRows - 1) {
+    output += '*';
+  } else {
+    output += '&nbsp;';
+  }
+
+  // Agregar un salto de línea al final de la fila
+  output += '<br>';
+
+}
+
+// Imprimir la pirámide de letras 'o' centrada en la pantalla con asteriscos en las esquinas
+document.write(output);
+
+
+
+
+  
+   </script>
  </body>
 </html>
