@@ -47,56 +47,25 @@ for (let i = 0; i < numRows; i++) {
     output += '&nbsp;';
   }
 
-  // Agregar el carácter '*' en lugar de 'o' en la esquina superior izquierda de la pirámide
-  if (i === 0) {
-    output += '*';
-  } else {
-    output += '&nbsp;';
-  }
-
   // Iterar sobre cada columna en la fila actual
   for (let j = 0; j < numCols; j++) {
 
     // Verificar si esta columna debe tener una letra 'o'
     const shouldPrint = (i + j) >= (numRows - 1) && (j - i) <= (numRows - 1);
 
-    // Sustituir la primera 'o' en la última fila por un asterisco
-    if (i === numRows - 1 && j === 0) {
-      output += '*';
-    }
-    // Sustituir la última 'o' en la última fila por un asterisco
-    else if (i === numRows - 1 && j === numCols - 1) {
-      output += '*';
-    }
-    // Agregar una letra 'o' en las demás posiciones que correspondan
-    else if (shouldPrint) {
+    // Agregar la letra 'o' y un espacio después, o un espacio en blanco si no es necesario imprimir una letra 'o'
+    if (shouldPrint) {
       output += 'o&nbsp;';
     } else {
       output += '&nbsp;&nbsp;';
     }
-
   }
-
-  // Sustituir la primera 'o' de la primera fila por un asterisco
-  if (i === 0) {
-    output += '*';
-  }
-  // Sustituir la última 'o' de la última fila por un asterisco
-  else if (i === numRows - 1) {
-    output += '*';
-  } else {
-    output += '&nbsp;';
-  }
-
   // Agregar un salto de línea al final de la fila
   output += '<br>';
-
 }
 
-// Imprimir la pirámide de letras 'o' centrada en la pantalla con asteriscos en las esquinas
+// Imprimir la pirámide de letras 'o' centrada en la pantalla
 document.write(output);
-
-
 
 
   
