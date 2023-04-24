@@ -1,10 +1,25 @@
 'use strict';
 var color = 'white';
 
-//arrays, esta es una forma aunq tambiens e pueden meter directamente dentro de los [] separado pro comas 
-/*var colorFr=[];
-colorFn[0]='white';
-colorFn[0]='white';*/
+//SOLO arrays, esta es una forma aunq tambiens e pueden meter directamente dentro de los [] separado pro comas 
+//SE CAMBIA EL BACK Y EL COLOR DE LA LETRA SEGUNE STE ASOCIADO EN EL ARRAY 
+var colorFn=[];
+colorFn[0]='magenta';
+colorFn[1]='blue';
+colorFn[2]='red';
+colorFn[3]='black';
+colorFn[4]='yellow';
+
+var colorFx= new Array ["blue","white","red","yellow","black"]; //declarar un nuevo array
+
+function pinturaInicial(){
+for(let i=0; i<5; i++){
+  let identificador= "c" +(i+1);
+  let elemento=document.getElementById(identificador);
+  elemento.style.backgroundColor=colorFn[i];
+  elemento.style.color=colorFx[i];
+}
+}
 //ahora al color lo cogemos con una funcion.
 //este programa solo define funciones invocadas e inicializadas de forma global con htlm
 function obtieneColor(identificador) {
@@ -22,7 +37,7 @@ function saludar(identificador) {
 
 }
 
-obtieneColor();
+pinturaInicial();
 
 //LA FORMA DE ABAJO TE LO PIDE DENTRO DEL CUADRO UNA VEZ ELEGIDO YA EL LUGAR
 /* // Pedir al usuario que seleccione un color utilizando un elemento select
