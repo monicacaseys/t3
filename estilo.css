@@ -44,7 +44,7 @@ h1{
      width: 100px;
     height: 75px;
     text-align: center;
-    background-color:dodgerblue;
+    background-color:rgb(30, 255, 206);
 }
 
 
@@ -54,7 +54,7 @@ h1{
      width: 100px;
     height: 75px;
     text-align: center;
-    background-color:dodgerblue;
+    background-color:rgb(255, 30, 255);
 }
 #c4{
     align-items: baseline;
@@ -62,7 +62,7 @@ h1{
      width: 100px;
     height: 75px;
     text-align: center;
-    background-color:dodgerblue;
+    background-color:rgb(255, 165, 30);
 }
 #c5{
     align-items: baseline;
@@ -70,6 +70,6 @@ h1{
      width: 100px;
     height: 75px;
     text-align: center;
-    background-color:dodgerblue;
+    background-color:rgb(158, 255, 30);
 }
 

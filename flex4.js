@@ -1,23 +1,12 @@
 'use strict';
 var color = 'white';
 
-//pedimos solo el color para quedewspiesw selecione el cuadrado directamente sin decir el numero
-function eligeColor() {
-  color = prompt("Elija un color para el texto (red, green, blue)", "");
-  switch (color) {
-    case 1:
-    case 'rojo':
-      color = 'red';
-      break;
-    case 'azul':
-      color = 'blue';
-      break;
-    case 'amarillo':
-      color = 'yellow';
-      break;
-    default:
-      color = 'black';//lo pongo en negro para saber que es in color erroneo
-  }
+//ahora al color lo cogemos con una funcion.
+//este programa solo define funciones invocadas e inicializadas de forma global con htlm
+function obtieneColor() {
+  let id = "c" + identificador; //modo string lo concatena
+  color=document.getElementById(id).style.backgroundColor;
+ 
 }
 function saludar(identificador) {
   let id = "c" + identificador; //modo string lo concatena
