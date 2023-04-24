@@ -1,11 +1,17 @@
 'use strict';
 var color = 'white';
 
+//arrays, esta es una forma aunq tambiens e pueden meter directamente dentro de los [] separado pro comas 
+/*var colorFr=[];
+colorFn[0]='white';
+colorFn[0]='white';*/
 //ahora al color lo cogemos con una funcion.
 //este programa solo define funciones invocadas e inicializadas de forma global con htlm
-function obtieneColor() {
+function obtieneColor(identificador) {
   let id = "c" + identificador; //modo string lo concatena
-  color=document.getElementById(id).style.backgroundColor;
+  let cuadro = document.getElementById(id);
+  color=getComputedStyle(cuadro).backgroundColor;
+  console.log(color);
  
 }
 function saludar(identificador) {
@@ -15,40 +21,8 @@ function saludar(identificador) {
   cuadro.innerHTML = "HOLA";
 
 }
-/*
-en este caso repetimos mucho codigo ya quie identificamos cada funcion segun el id en el htmnl donde tambien hay que poner su respctiva funcion con el numero
-function saludarc1(){
-   let cuadro=document.getElementById("c1");
-   cuadro.style.color=color;
-   cuadro.innerHTML="HOLA";
 
-}
-function saludarc2(){
-  let cuadro=document.getElementById("c2");
-  cuadro.style.color=color;
-  cuadro.innerHTML="HOLA";
-
-}
-function saludarc3(){
-  let cuadro=document.getElementById("c3");
-  cuadro.style.color=color;
-  cuadro.innerHTML="HOLA";
-
-}
-function saludarc4(){
-  let cuadro=document.getElementById("c4");
-  cuadro.style.color=color;
-  cuadro.innerHTML="HOLA";
-
-}
-function saludarc5(){
-  let cuadro=document.getElementById("c5");
-  cuadro.style.color=color;
-  cuadro.innerHTML="HOLA";
-
-}*/
-eligeColor();
-
+obtieneColor();
 
 //LA FORMA DE ABAJO TE LO PIDE DENTRO DEL CUADRO UNA VEZ ELEGIDO YA EL LUGAR
 /* // Pedir al usuario que seleccione un color utilizando un elemento select
