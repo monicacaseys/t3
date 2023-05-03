@@ -12,7 +12,7 @@ var color = 'white';
 //SE CAMBIA EL BACK Y EL COLOR DE LA LETRA SEGUNE STE ASOCIADO EN EL ARRAY
 // trabajamos con arrays
 
-var colorFr= new Array ['dodgerblue','rgb(30, 255, 206)','rgb(255, 30, 255)','rgb(255, 165, 30)','rgb(158, 255, 30)']
+var colorFr= new Array ('dodgerblue','rgb(30, 255, 206)','rgb(255, 30, 255)','rgb(255, 165, 30)','rgb(158, 255, 30)');
 var colorFn= [];
 colorFn[0]= 'magenta';
 colorFn[1]= 'blue';
